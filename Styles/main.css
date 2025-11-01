@@ -131,6 +131,7 @@
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
     top: -100px;
+    text-align: center;
 }
 #box-category{
     color: black;
@@ -213,6 +214,9 @@
     padding-top: 13px;
     padding-left: 5%;
     margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 #Product-Category{
     margin: 0px;
@@ -222,6 +226,9 @@
     color: rgb(230, 230, 230);
     font-family: Arial, Helvetica, sans-serif;
     transform: scaleY(1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #Product-Cost{
     margin: 0px;
@@ -231,4 +238,58 @@
     color: rgb(230, 230, 230);
     font-family: Arial, Helvetica, sans-serif;
     transform: scaleY(1);
+}
+
+.blinker {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.blinker:hover {
+  animation: blinker 0.2s linear 1 forwards;
+  background-color: rgb(24, 22, 22);
+  color: white;
+}
+
+/* Flicker animation */
+@keyframes blinker {
+  0%   { background-color: white; color: rgb(24, 22, 22);}
+  25%  { background-color: rgb(24, 22, 22); color: white;}
+  50%  { background-color: white; color: rgb(24, 22, 22);}
+  75%  { background-color: rgb(24, 22, 22); color: white;}
+  99%  { background-color: white; color: rgb(24, 22, 22);}
+  100% { background-color: rgb(24, 22, 22); color: white;}
+}
+
+
+#souled-content-area{
+    margin-top: 3px;
+    height: 40em;
+    width: 100%;
+    margin-right: 20px;
+    background-color: red;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+#souled-header{
+    height: 90px;
+    width: 100%;
+    min-width: 100px;
+    background-color: aqua;
+    font-size: 45px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+#souled-header span{
+    transition: font-size 0.2s ease;
+    font-family: "Momo Signature", cursive;
+}
+#souled-header span:hover{
+    font-size: 63px;
 }
