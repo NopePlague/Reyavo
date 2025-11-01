@@ -32,7 +32,7 @@
                     <p id="Hero-box1">NEW ARRIVAL</p>
                     <p id="Hero-txt1">Trancking Gear</p>
                     <p id="Hero-txt2">Oblivion offers limited-edition, rare pieces from past collections with proven real-world performance and technical utility.</p>
-                    <a href="#"><p id="Hero-box2">SHOP NOW &#9655;</p></a>
+                    <a href="#Tracking-gear"><p id="Hero-box2">SHOP NOW &#9655;</p></a>
                 </div>
             </div>
         </section>
@@ -40,15 +40,160 @@
             <div id="categories">
                 <p>TRENDING <span class="dotted-line"></span></p>
                 <p>NEW IN <span class="dotted-line"></span></p>
-                <p>MOUNTAIN GEAR <span class="dotted-line"></span></p>
+                <p id="Tracking-gear">TRACKING GEAR <span class="dotted-line"></span></p>
                 <p>RESTOCK LANDED <span class="dotted-line"></span></p>
             </div>
+            <div id="underline"></div>
             <div id="categories-box2">
                 <p id="big-category">TRENDING</p>
+                <p id="small-category"></p>
+                <a href="#" id="box-category"><p style="margin: 0px;">SHOP NOW &#9655;</p></a>
             </div>
+        </section>
+        <section id="content-container" style="position:relative; height:100px; overflow:hidden;">
+            <div id="trending-content" class="category-content" style="width: 100%; height: 100px; background-color: red;">Content for Trending</div>
+            <div id="newin-content" class="category-content" style="width: 100%; height: 100px; background-color: white;">Content for New In</div>
+            <div id="trackinggear-content" class="category-content" style="width: 100%; height: 100px; background-color: aqua;">Content for Tracking Gear</div>
+            <div id="restock-content" class="category-content" style="width: 100%; height: 100px; background-color: yellow;">Content for Restock Landed</div>
+
         </section>
 
         
     </main>
 </body>
+<script>
+const categories = document.getElementById('categories');
+const underline = document.getElementById('underline');
+const categoryItems = Array.from(categories.querySelectorAll('p'));
+
+// Map category names to content div IDs
+const contentMap = {
+  'TRENDING': 'trending-content',
+  'NEW IN': 'newin-content',
+  'TRACKING GEAR': 'trackinggear-content',
+  'RESTOCK LANDED': 'restock-content'
+};
+
+let activeIndex = 0; // index of currently active category
+
+// Animate content sliding left/right based on active category change
+function animateContentTransition(newIndex) {
+  if (newIndex === activeIndex) return; // no change
+
+  const currentContentId = contentMap[categoryItems[activeIndex].textContent.trim().toUpperCase()];
+  const nextContentId = contentMap[categoryItems[newIndex].textContent.trim().toUpperCase()];
+
+  const currentContent = document.getElementById(currentContentId);
+  const nextContent = document.getElementById(nextContentId);
+
+  const goingRight = newIndex > activeIndex;
+
+  // Prepare next content off-screen on correct side without transition
+  nextContent.style.transition = 'none'; // temporarily disable transition to reposition instantly
+  nextContent.style.transform = `translateX(${goingRight ? '-100%' : '100%'})`;
+  nextContent.style.opacity = '1';
+  nextContent.classList.add('active');
+
+  // Force reflow for transition to apply on next change
+  void nextContent.offsetWidth;
+
+  // Re-enable transition for smooth animation
+  nextContent.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+
+  // Animate current content out (to right or left)
+  currentContent.style.transform = `translateX(${goingRight ? '100%' : '-100%'})`;
+  currentContent.style.opacity = '0';
+
+  // Animate next content in to center
+  setTimeout(() => {
+    nextContent.style.transform = 'translateX(0)';
+    currentContent.classList.remove('active');
+  }, 20);
+
+  activeIndex = newIndex;
+}
+
+// Move underline under selected category and update texts
+function moveUnderlineTo(element) {
+  const parentRect = categories.getBoundingClientRect();
+  const elRect = element.getBoundingClientRect();
+
+  const leftPos = elRect.left - parentRect.left;
+  const width = elRect.width;
+
+  underline.style.left = (leftPos - 10) + 'px';
+  underline.style.width = width + 'px';
+
+  // Update big-category text
+  document.getElementById('big-category').textContent = element.textContent.trim();
+
+  // Update small-category text based on activated element
+  const smallCategory = document.getElementById('small-category');
+  switch (element.textContent.trim().toUpperCase()) {
+    case 'TRENDING':
+      smallCategory.textContent = 'Top picks for this season, as chosen by you.';
+      break;
+    case 'NEW IN':
+      smallCategory.textContent = 'Here today, gone tomorrow.';
+      break;
+    case 'TRACKING GEAR':
+      smallCategory.textContent = 'Experience the pinnacle of mountaineering with our new Tracking Gears.';
+      break;
+    case 'RESTOCK LANDED':
+      smallCategory.textContent = "They've sold out once and they'll do it again, so grab these popular men's outdoor clothing and bestselling gear now.";
+      break;
+    default:
+      smallCategory.textContent = '';
+  }
+
+  // Animate sliding transition of content
+  const newIndex = categoryItems.indexOf(element);
+  animateContentTransition(newIndex);
+}
+
+// Initialize on DOM content loaded: show trending by default
+document.addEventListener('DOMContentLoaded', () => {
+  // Show trending content active initially
+  document.querySelectorAll('.category-content').forEach(div => div.classList.remove('active'));
+  document.getElementById('trending-content').classList.add('active');
+
+  animateContentTransition(0); // Ensure activeIndex and animation synced
+  moveUnderlineTo(categoryItems[0]);
+  activeIndex = 0;
+});
+
+// Add click handlers for category navigation
+categoryItems.forEach(p => {
+  p.addEventListener('click', () => {
+    moveUnderlineTo(p);
+  });
+});
+
+// Keep underline and content synced on window resize
+window.addEventListener('resize', () => {
+  moveUnderlineTo(categoryItems[activeIndex]);
+});
+
+// Hero box "SHOP NOW" button scroll and activate tracking gear category
+const bigCategory = document.getElementById('Hero-box2');
+bigCategory.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  const targetId = 'Tracking-gear';
+  const targetElement = document.getElementById(targetId);
+
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+
+    setTimeout(() => {
+      const target = categoryItems.find(p =>
+        p.textContent.trim().toUpperCase().includes('TRACKING GEAR')
+      );
+      if (target) moveUnderlineTo(target);
+    }, 600);
+  }
+});
+</script>
+
+
 </html>

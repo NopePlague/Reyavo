@@ -14,7 +14,9 @@
     left: 60px; 
     z-index: 10; 
     height: 220px;
-    width: 600px;
+    max-width: 600px;
+    width: auto;
+    min-width: 400px;
 }
 #Hero-box1{
     font-family: Arial, Helvetica, sans-serif;
@@ -79,9 +81,9 @@
 
 
 #Category-container{
-    background-color: aqua;
     width: 100%;
     height: 300px;
+    color: white;
 }
 #categories{
     width: 100%;
@@ -96,7 +98,7 @@
   display: inline-block;
   width: 2px;
   height: 20px;
-  border-left: 2px dotted black;
+  border-left: 2px dotted white;
   margin: 0 5px;
   vertical-align: middle;
 }
@@ -108,15 +110,78 @@
     padding: 5px;
     cursor: pointer;
 }
-#underline {
-  position: absolute;
-  bottom: 0;
-  height: 3px;
-  background-color: black;
-  transition: left 0.3s ease, width 0.3s ease;
-  border-radius: 2px;
-}
 #categories-box2{
+    width: 100%;
+    height: 175px;
     position: relative;
-    
+    top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#big-category{
+    font-family: "Orbitron", sans-serif;
+    font-size: 40px;
+    position: relative;
+    top: -50px;
+}
+#small-category{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: -100px;
+}
+#box-category{
+    color: black;
+    margin: 0px;
+    background-color: white;
+    width: auto;
+    padding: 10px;
+    font-size: 13px;
+    position: relative;
+    top: -80px;
+    bottom: 0px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    text-decoration: none;
+    animation: moveUpGlow 3s ease-in-out infinite;
+}
+#box-category:hover{
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+}
+#box-category:active{
+    background-color: rgb(173, 173, 173);
+}
+#underline{
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    bottom: -50px;
+}
+
+/* .category-content {
+  display: none;
+}
+.category-content.active {
+  display: block;
+} */
+
+.category-content {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.category-content.active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
 }
