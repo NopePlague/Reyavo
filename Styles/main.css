@@ -250,7 +250,6 @@
   color: white;
 }
 
-/* Flicker animation */
 @keyframes blinker {
   0%   { background-color: white; color: rgb(24, 22, 22);}
   25%  { background-color: rgb(24, 22, 22); color: white;}
@@ -272,24 +271,42 @@
     flex-direction: column;
     align-items: center
 }
-#souled-header{
+#souled-header-box{
     height: 90px;
     width: 100%;
     min-width: 100px;
     background-color: aqua;
-    font-size: 45px;
-    color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-    overflow-y: hidden;
-
+    
 }
-#souled-header span{
-    transition: font-size 0.2s ease;
+#souled-content{
+    display: flex;
+    width: 100%;
     font-family: "Momo Signature", cursive;
+    font-size: 45px;
+    justify-content: space-around;
+    align-items: center;
+    text-shadow: 2px 2px red;
 }
-#souled-header span:hover{
+#souled-content span{
+    color: white;
+    transition: font-size 0.2s ease;
+}
+#souled-content span:hover{
     font-size: 63px;
+}
+
+#souled-pro-img-box{
+    height: 100%;
+    width: 45%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#souled-pro-img-box button{
+    background-color: white;
+    border: none;
+    width: calc(100%-10px);
+    margin: 5px;
 }
