@@ -307,6 +307,18 @@
 #souled-pro-img-box button{
     background-color: white;
     border: none;
-    width: calc(100%-10px);
+    width: calc(100% - 10px);
+    height: 100%;
     margin: 5px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    letter-spacing: 2px;
+    overflow-x: hidden;
 }
+#souled-pro-img-box button:hover{
+    animation: blinker 0.2s linear 1 forwards;
+    background-color: rgb(24, 22, 22);
+    color: white;
+    border: none;
+}
+
