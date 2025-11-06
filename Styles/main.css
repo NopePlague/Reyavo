@@ -306,7 +306,6 @@
 }
 #souled-pro-img-box button{
     background-color: white;
-    border: none;
     width: calc(100% - 10px);
     height: 100%;
     margin: 5px;
@@ -319,6 +318,6 @@
     animation: blinker 0.2s linear 1 forwards;
     background-color: rgb(24, 22, 22);
     color: white;
-    border: none;
+
 }
 
