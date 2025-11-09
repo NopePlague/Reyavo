@@ -265,7 +265,7 @@
     height: 40em;
     width: 100%;
     margin-right: 20px;
-    background-color: red;
+    /* background-color: red; */
     gap: 0;
     display: flex;
     flex-direction: column;
@@ -275,7 +275,7 @@
     height: 90px;
     width: 100%;
     min-width: 100px;
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     
 }
@@ -299,13 +299,13 @@
 #souled-pro-img-box{
     height: 100%;
     width: 45%;
-    background-color: black;
+    /* background-color: black; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 #souled-pro-img-box button{
-    background-color: white;
+    /* background-color: white; */
     width: calc(100% - 10px);
     height: 100%;
     margin: 5px;
@@ -320,4 +320,11 @@
     color: white;
 
 }
-
+.souled-effect{
+    width: 32%;
+    height: 47%
+}
+.souled-effect:hover{
+    width: 34%;
+    height: 49%
+}
