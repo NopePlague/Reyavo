@@ -259,7 +259,9 @@
   100% { background-color: rgb(24, 22, 22); color: white;}
 }
 
-
+#souled-category::-webkit-scrollbar {
+  display: none;
+}
 #souled-content-area{
     margin-top: 3px;
     height: 40em;
