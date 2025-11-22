@@ -3,509 +3,1078 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./../Images/Logo.png">
     <title>Reyavo</title>
+    <link rel="icon" href="./../Images/Logo.png">
+    <link rel="stylesheet" href="./../CSS/style.css">
+    <link rel="stylesheet" href="./../CSS/general.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./../Styles/general.css">
-    <link rel="stylesheet" href="./../Styles/header.css">
-    <link rel="stylesheet" href="./../Styles/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div>
-            <img src="./../Images/Logo.png" style="height: 60px;">
+        <div id="header-container">
+            <div style="width: 60px;">
+                <button class="menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; color: white; justify-content: space-between;
+             margin-left: 20px; margin-right: 20px;">
+                <div id="sec-A" style="display: flex; gap: 1.7vw; justify-content: space-evenly; align-items: center;
+                font-size: 25px; font-weight: bold;">
+                    <div class="sec"><a href="#" style="color: white; text-decoration: none;" id="men-sec">MEN</a></div>
+                    <div class="sec"><a href="#" style="color: white; text-decoration: none;" id="men-sec">WOMEN</a></div>
+                    <div class="sec"><a href="#" style="color: white; text-decoration: none;" id="men-sec">SNEAKERS</a></div>
+                </div>
+                <div style="height: 100%; display: flex; justify-content: center; align-items: center; margin:0 25px;">
+                    <img src="./../Images/Logo.png" style="height: 80%;">
+                </div>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1vw;">
+                         <input type="text" id="search" placeholder="SEARCH" class="search">
+                         <div style="height: 90%; box-sizing: border-box; border: none; transform: translateY(0px);" class="underline-A">
+                            <img id="seach-appear" src="./../Images/SVG/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" style="height: 40px;">
+                         </div>
+                         <div style="height: 90%; box-sizing: border-box;" class="underline-A">
+                            <img src="./../Images/SVG/account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" style="height: 40px;">
+                         </div>
+                         <div style="height: 90%; box-sizing: border-box;" class="underline-A">
+                            <img src="./../Images/SVG/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" style="height: 40px;">
+                         </div>
+                         <div style="height: 90%; box-sizing: border-box;" class="underline-A">
+                            <img src="./../Images/SVG/shopping_cart_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" style="height: 40px;">
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%; height: 70.01px;"></div>
+        <div id="sized-fix">
+            <div id="fixed-A"><a href="#" style="color: white; text-decoration: none;">MEN</a></div>
+            <div style="width: 2px; height: 70%; background-color: white;"></div>
+            <div id="fixed-A"><a href="#" style="color: white; text-decoration: none;">WOMEN</a></div>
+            <div style="width: 2px; height: 70%; background-color: white;"></div>
+            <div id="fixed-A"><a href="#" style="color: white; text-decoration: none;">SNEAKERS</a></div>
         </div>
     </header>
     <main>
-        <section>
-            <div style="position: relative; width: 100%; height: 791px; overflow: hidden;">
-                <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
-                    <source src="./../Hero-video.mp4" type="video/mp4">
-                </video>
-                <img src="./../Images/Checkout-Logo-removebg-preview.png" id="checkout-logo">
-                <div id="Hero-Area">
-                    <p id="Hero-box1">NEW ARRIVAL</p>
-                    <p id="Hero-txt1">Trancking Gear</p>
-                    <p id="Hero-txt2">Oblivion offers limited-edition, rare pieces from past collections with proven real-world performance and technical utility.</p>
-                    <!-- <a href="#Tracking-gear"><p id="Hero-box2">SHOP NOW &#9655;</p></a> -->
-                    <a href="./../login-page.html"><p id="Hero-box2">SHOP NOW &#9655;</p></a>
-                </div>
-            </div>
-        </section>
-        <section id="Category-container">
-            <div id="categories">
-                <p>TRENDING <span class="dotted-line"></span></p>
-                <p>NEW IN <span class="dotted-line"></span></p>
-                <p id="Tracking-gear">TRACKING GEAR <span class="dotted-line"></span></p>
-                <p>RESTOCK LANDED <span class="dotted-line"></span></p>
-            </div>
-            <div id="underline"></div>
-            <div id="categories-box2">
-                <p id="big-category">TRENDING</p>
-                <p id="small-category"></p>
-                <a href="#" id="box-category"><p style="margin: 0px;">SHOP NOW &#9655;</p></a>
-            </div>
-        </section>
-
-
-        <section id="content-container" style="position:relative; height:530px; overflow:hidden;min-width: 1000px;">
-            <div id="trending-content" class="category-content" style="width: 100%; height: 530px;">
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/Trending/trending-img1.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">MEN's BLACK POLARTEC&reg</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">INSULATED GILET</p>
-                  <p id="Product-Cost">&#8377; 17,900</p>
-                </div>
-              </div>
-              
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/Trending/trending-img2.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">SHROUD</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">INSULATED OVERCOAT</p>
-                  <p id="Product-Cost">&#8377; 35,700</p>
-                </div>
-              </div>
-
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/Trending/trending-img3.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">MOUNTAIN PRO INSULATED JACKET</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">ALPINE JACKET</p>
-                  <p id="Product-Cost">&#8377; 33,900</p>
-                </div>
-              </div>
-
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/Trending/trending-img4.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                <p id="Product-Name">MEN's BLACK POLARTEC&reg THERMAL PRO&reg</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">INSULATED GILET</p>
-                  <p id="Product-Cost">&#8377; 23,800</p>
-                </div>
-              </div>
-            </div>
-
-
-
-            <div id="newin-content" class="category-content" style="width: 100%; height: 530px;">
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/New-In/new-in-img-1.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">INSIGNIA T-SHIRT - ODIN</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">COTTON T-SHIRT</p>
-                  <p id="Product-Cost">&#8377; 7,800</p>
-                </div>
-              </div>
-              
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/New-In/new-in-img-2.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">MEN's GREY POLARTEC®</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">INSULATED 1/4 ZIP FLEECE</p>
-                  <p id="Product-Cost">&#8377; 20,900</p>
-                </div>
-              </div>
-
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/New-In/new-in-img-3.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">DISSIDENT SHORT FIELD JACKET</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">MEN's BROWN INSULATED WORK JACKET</p>
-                  <p id="Product-Cost">&#8377; 29,800</p>
-                </div>
-              </div>
-
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/New-In/new-in-img-4.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">DISSIDENT UTILITY VEST</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">MEN's BLACK INSULATED WORK JACKET</p>
-                  <p id="Product-Cost">&#8377; 17,900</p>
-                </div>
-              </div>
-            </div>
-            <div id="trackinggear-content" class="category-content" style="width: 100%; height: 530px;">
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/Tracking-Gear/tracking-gear-img-1.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">MOUNTAIN PRO WATERPROOF JACKET</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">MEN's BROWN 3-LAYER HARD SHELL JACKET</p>
-                  <p id="Product-Cost">&#8377; 53,600</p>
-                </div>
-              </div>
-              
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/Tracking-Gear/tracking-gear-img-2.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">MOUNTAIN PRO TECHNICAL TROUSERS</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">MEN'S BLACK DURABLE ALPINE TROUSERS</p>
-                  <p id="Product-Cost">&#8377; 20,900</p>
-                </div>
-              </div>
-
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/Tracking-Gear/tracking-gear-img-3.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">MOUNTAIN PRO FUSION JACKET</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">MEN'S BLACK HOODED PACKABLE ALPINE JACKET</p>
-                  <p id="Product-Cost">&#8377; 29,800</p>
-                </div>
-              </div>
-
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/Tracking-Gear/tracking-gear-img-4.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">MOUNTAIN PRO WATERPROOF TROUSERS</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">MEN'S GREEN WATERPROOF ALPINE TROUSERS</p>
-                  <p id="Product-Cost">&#8377; 47,600</p>
-                </div>
-              </div>
-            </div>
-            <div id="restock-content" class="category-content" style="width: 100%; height: 530px;">
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/Restock-Cntent/restock-content-img1.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">MOUNTAIN PRO INSULATED JACKET</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">MEN'S BLACK SOFT SHELL ALPINE JACKET</p>
-                  <p id="Product-Cost">&#8377; 33,900</p>
-                </div>
-              </div>
-              
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/Restock-Cntent/restock-content-img2.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">COMMAND TROUSERS</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">MEN'S BLACK NYCO RIPSTOP OUTDOOR TROUSERS</p>
-                  <p id="Product-Cost">&#8377; 22,100</p>
-                </div>
-              </div>
-
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/Restock-Cntent/restock-content-img3.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">DISSIDENT WAFFLE LONG SLEEVE T-SHIRT</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">MEN'S BLACK SOFT SHELL ALPINE JACKET</p>
-                  <p id="Product-Cost">&#8377; 9,000</p>
-                </div>
-              </div>
-
-              <div class="product-container">
-                <div id="product-img-container">
-                  <img src="./../Images/Restock-Cntent/restock-content-img4.jpg">
-                </div>
-                <div style="width: 100%;height: 6em;">
-                  <p id="Product-Name">SHROUD</p>
-                  <div style="width: 90%;margin: 0 auto;height: 2px;background-color: lightgray;position: relative;top: -2px;"></div>
-                  <p id="Product-Category">UNISEX BLACK OVERSIZED INSULATED OVERCOAT</p>
-                  <p id="Product-Cost">&#8377; 31,000</p>
-                </div>
-              </div>
-            </div>
-        </section>
-
-        
-        <section style="justify-content: space-between; min-width: 1000px;width: 100%;aspect-ratio: 2.38 / 1;max-height: 480px;margin-top: 70px; display: flex;">
-          <div style="position: relative; width: 100%; height: 100%;">
-            <img src="./../Images/Categories/img-1.jpeg" style="width: 100%; height: 100%;">
-            
-            <div style="
-              position: absolute;
-              bottom: 10px;
-              left: 0;
-              width: 100%;
-              text-align: center;
-            ">
-              <p style="font-size: 30px; color: white; font-family: Orbitron, sans-serif; margin: 0;">
-                MOUNTAIN PRO
-              </p>
-              <a href="#" style="text-decoration: none; display: inline-block;">
-                <p style="
-                  color: black;
-                  background-color: white;
-                  padding: 10px;
-                  font-size: 13px;
-                  letter-spacing: 2px;
-                  word-spacing: 4px;
-                  margin: 0;
-                  display: inline-block;
-                  transform: translateX(-50%);
-                  position: relative;
-                  left: 50%;
-                  margin-top: 15px;
-                "
-                class="blinker">
-                  SHOP NOW &#9655;
-                </p>
-              </a>
-            </div>
-          </div>
-
-          <div style="position: relative; width: 100%; height: 100%;">
-            <img src="./../Images/Categories/img-2.jpeg" style="width: 100%; height: 100%;">
-            
-            <div style="
-              position: absolute;
-              bottom: 10px;      /* Distance from bottom of image container */
-              left: 0;
-              width: 100%;       /* Full width overlay */
-              text-align: center;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            ">
-              <p style="font-size: 30px; color: white; font-family: Orbitron, sans-serif; margin: 0;width: 350px;">
-                OBLIVION SALE: NEW LINES ADDED
-              </p>
-              <a href="#" style="text-decoration: none; display: inline-block;">
-                <p style="
-                  color: black;
-                  background-color: white;
-                  padding: 10px;
-                  font-size: 13px;
-                  letter-spacing: 2px;
-                  word-spacing: 4px;
-                  margin: 0;
-                  display: inline-block;
-                  transform: translateX(-50%);
-                  position: relative;
-                  left: 50%;
-                  margin-top: 15px;
-                "
-                class="blinker">
-                  SHOP NOW &#9655;
-                </p>
-              </a>
-            </div>
-          </div>
-
-          <div style="position: relative; width: 100%; height: 100%;">
-            <img src="./../Images/Categories/img-3.jpeg" style="width: 100%; height: 100%;">
-            
-            <div style="
-              position: absolute;
-              bottom: 10px;
-              left: 0;
-              width: 100%;
-              text-align: center;
-            ">
-              <p style="font-size: 30px; color: white; font-family: Orbitron, sans-serif; margin: 0;">
-                MANTRA
-              </p>
-              <a href="#" style="text-decoration: none; display: inline-block;">
-                <p style="
-                  color: black;
-                  background-color: white;
-                  padding: 10px;
-                  font-size: 13px;
-                  letter-spacing: 2px;
-                  word-spacing: 4px;
-                  margin: 0;
-                  display: inline-block;
-                  transform: translateX(-50%);
-                  position: relative;
-                  left: 50%;
-                  margin-top: 15px;
-                "
-                class="blinker">
-                SHOP NOW &#9655;
-              </p>
-            </a>
-          </div>
+        <div>
+            <img src="./../Images/Hero-Sec-A/img-1.avif" style="width: 100%;">
+            <img src="./../Images/Hero-Sec-A/img-2.avif" style="width: 100%;">
+            <img src="./../Images/Hero-Sec-A/img-3.avif" style="width: 100%;">
+            <img src="./../Images/Hero-Sec-A/img-4.avif" style="width: 100%;">
+            <img src="./../Images/Hero-Sec-A/img-5.avif" style="width: 100%;">
+            <img src="./../Images/Hero-Sec-A/img-6.avif" style="width: 100%;">
         </div>
-      </section>
-      
-      <section style="width: 100%; height: 510px; background-color: rgb(50, 50, 50); margin-top: 50px;">
-        <div style="display: flex; overflow-x: auto;" id="souled-category">
-          <img src="./../Images/Souled-pro/souled-hero-img-1.avif" style="width: 100%; object-fit: cover; height: 100%;">
-          <img src="./../Images/Souled-pro/souled-hero-img-2.avif" style="width: 100%; object-fit: cover;">
-          <img src="./../Images/Souled-pro/souled-hero-img-3.avif" style="width: 100%; object-fit: cover;">
-          <img src="./../Images/Souled-pro/souled-hero-img-4.avif" style="width: 100%; object-fit: cover;">
+        <div>
+            <img src="./../Images/Hero-Sec-B/img-1.avif" style="width: 100%;">
+            <img src="./../Images/Hero-Sec-B/img-2.avif" style="width: 100%;">
+            <img src="./../Images/Hero-Sec-B/img-3.avif" style="width: 100%;">
+            <img src="./../Images/Hero-Sec-B/img-4.avif" style="width: 100%;">
+            <img src="./../Images/Hero-Sec-B/img-5.avif" style="width: 100%;">
+            <img src="./../Images/Hero-Sec-B/img-6.avif" style="width: 100%;">
         </div>
-      </section>
-
-        <section style="margin-top: 70px; margin-bottom: 30px;">
-          <div style="width: 100%;min-height: 500px; height: auto; display: flex;justify-content: space-between;">
+        <div>
+            NEW ARRIVALS
+        </div>
+        <div class="new-arrivals">
             <div>
-              <video autoplay muted loop playsinline style="border-radius: 3px; margin-top: 3px;margin-left: 5px; margin-right: 5px;">
-                  <source src="./../TheSouledStore.mp4" type="video/mp4">
-              </video>
+                <img src="./../Images/New-Arrivals/img-1.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Demon Slayer: Rengoku
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Oversized T-Shirts
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹1299
+                    </div>
+                </div>
             </div>
-            <div id="souled-content-area">
-              <div id="souled-header-box">
-                <div style="width: 200px; height: 80px;margin-left: 80px;">
-                  <img src="./../Images/Souled-logo.png" height="100%">
-                </div>
-                <div id="souled-content">
-                  <span>T&nbsp;</span>
-                  <span>H&nbsp;</span>
-                  <span>E&nbsp;</span>
-                  <p>&nbsp;&nbsp;&nbsp;</p>
-                  <span>S&nbsp;</span>
-                  <span>O&nbsp;</span>
-                  <span>U&nbsp;</span>
-                  <span>L&nbsp;</span>
-                  <span>E&nbsp;</span>
-                  <span>D&nbsp;</span>
-                  <p>&nbsp;&nbsp;&nbsp;</p>
-                  <span>S&nbsp;</span>
-                  <span>T&nbsp;</span>
-                  <span>O&nbsp;</span>
-                  <span>R&nbsp;</span>
-                  <span>E&nbsp;</span>
-                </div>
-              </div>
-              <div style="width: 100%;height: 100%;display: flex; justify-content: space-evenly;align-items: center;flex-wrap: wrap;">
-                <div style="width: 32%;height: 47%; background-color: rgb(50, 50, 50); display: flex;overflow: hidden;border-radius: 13px;margin-bottom: 20px;">
-                  <div id="souled-pro-img-box">
-                    <img src="./../Images/Souled-pro/Souled-pro-img-1.avif" style="width: 100%; border-radius: 13px;">
-                    <div style="height: auto;width: 100%;">
-                      <button><span id="heart">&#9825;</span>&nbsp;&nbsp;WISHLIST</button>
+            <div>
+                <img src="./../Images/New-Arrivals/img-2.avif"  class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Demon Slayer: Zenitsu
                     </div>
-                  </div>
-                  <div style="width: 55%;height: 100%; background-color:rgb(50, 50, 50);text-align: center;color: white;over">
-                    <p style="transform: scaleY(0.9);">High-Neck Sweater: Essence</p>
-                    <p>PullOver</p>
-                    <p>₹&nbsp;1999</p>
-                    <p style="margin: auto 5px;overflow-y: hidden;height: 110px;">This sweater will feel like a hug from a cloud. No, not that awkward, clingy kind of hug. This is a hug that respects your personal space (but st... makes you feel amazing). How can you miss out on these?!</p>
-                  </div>
-                </div>
-                <div style="width: 32%;height: 47%; background-color: rgb(50, 50, 50); display: flex;overflow: hidden;border-radius: 13px;margin-bottom: 20px;">
-                  <div id="souled-pro-img-box">
-                    <img src="./../Images/Souled-pro/Souled-pro-img-2.avif" style="width: 100%; border-radius: 13px;">
-                    <div style="height: auto;width: 100%;">
-                      <button><span id="heart">&#9825;</span>&nbsp;&nbsp;WISHLIST</button>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Oversized T-Shirts
                     </div>
-                  </div>
-                  <div style="width: 55%;height: 100%; background-color:rgb(50, 50, 50);text-align: center;color: white;">
-                    <p style="transform: scaleY(0.9);">TSS Originals: Snow Storm</p>
-                    <p>Jackets</p>
-                    <p>₹&nbsp;2599</p>
-                    <p style="margin: auto 5px;overflow-y: hidden;height: 110px;">It's bold, it's striking, & it's unapologetically cool! Speed into style with our head-turning racer jackets & add an instant edge to any outfit. Created ... those who live life in the fast lane, these statement pieces command attention wherever you go.</p>
-                  </div>
-                </div>
-                <div style="width: 32%;height: 47%; background-color: rgb(50, 50, 50); display: flex;overflow: hidden;border-radius: 13px;margin-bottom: 20px;">
-                  <div id="souled-pro-img-box">
-                    <img src="./../Images/Souled-pro/Souled-pro-img-3.avif" style="width: 100%; border-radius: 13px;">
-                    <div style="height: auto;width: 100%;">
-                      <button><span id="heart">&#9825;</span>&nbsp;&nbsp;WISHLIST</button>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹1099
                     </div>
-                  </div>
-                  <div style="width: 55%;height: 100%; background-color:rgb(50, 50, 50);text-align: center;color: white;">
-                    <p style="transform: scaleY(0.9);">Hooded Sweater: Dusty Rose</p>
-                    <p>PullOver</p>
-                    <p>₹&nbsp;1999</p>
-                    <p style="margin: auto 5px;overflow-y: hidden;height: 110px;">Comfort meets sophistication in our ultra-plush hooded sweaters! Designed for the modern lifestyle, where the lines between casual for... slightly blurred, these sweaters work from busy Mondays to chilly Fridays.</p>
-                  </div>
                 </div>
-                <div style="width: 32%;height: 47%; background-color: rgb(50, 50, 50); display: flex;overflow: hidden;border-radius: 13px;">
-                  <div id="souled-pro-img-box">
-                    <img src="./../Images/Souled-pro/Souled-pro-img-4.avif" style="width: 100%; border-radius: 13px;">
-                    <div style="height: auto;width: 100%;">
-                      <button><span id="heart">&#9825;</span>&nbsp;&nbsp;WISHLIST</button>
-                    </div>
-                  </div>
-                  <div style="width: 55%;height: 100%; background-color:rgb(50, 50, 50);text-align: center;color: white;">
-                    <p style="transform: scaleY(0.9);">Oversized Jacket: Mandala</p>
-                    <p>Jackets</p>
-                    <p>₹&nbsp;2499</p>
-                    <p style="margin: auto 5px;overflow-y: hidden;height: 110px;">A streetwear staple that’s roomy, comfortable, and statement-ready. Great for layering over tees, hoodies, or even sweatshirts.</p>
-                  </div>
-                </div>
-                <div style="width: 32%;height: 47%; background-color: rgb(50, 50, 50); display: flex;overflow: hidden;border-radius: 13px;">
-                  <div id="souled-pro-img-box">
-                    <img src="./../Images/Souled-pro/Souled-pro-img-5.avif" style="width: 100%; border-radius: 13px;">
-                    <div style="height: auto;width: 100%;">
-                      <button><span id="heart">&#9825;</span>&nbsp;&nbsp;WISHLIST</button>
-                    </div>
-                  </div>
-                  <div style="width: 55%;height: 100%; background-color:rgb(50, 50, 50);text-align: center;color: white;">
-                    <p style="transform: scaleY(0.9);">Solids: Navy Blue</p>
-                    <p>Hoodies</p>
-                    <p>₹&nbsp;1699</p>
-                    <p style="margin: auto 5px;overflow-y: hidden;height: 110px;">Shop for TSS Originals: Twilight Blue Men Oversized Hoodie Online.</p>
-                  </div>
-                </div>
-                <div style="width: 32%;height: 47%; background-color: rgb(50, 50, 50); display: flex;overflow: hidden;border-radius: 13px;">
-                  <div id="souled-pro-img-box">
-                    <img src="./../Images/Souled-pro/Souled-pro-img-6.avif" style="width: 100%; border-radius: 13px;">
-                    <div style="height: auto;width: 100%;">
-                      <button><span id="heart">&#9825;</span>&nbsp;&nbsp;WISHLIST</button>
-                    </div>
-                  </div>
-                  <div style="width: 55%;height: 100%; background-color:rgb(50, 50, 50);text-align: center;color: white;">
-                    <p style="transform: scaleY(0.9);">Ninja Cops: Brownstone</p>
-                    <p>Hoodies</p>
-                    <p>₹&nbsp;2299</p>
-                    <p style="margin: auto 5px;overflow-y: hidden;height: 110px;">Shop for Oversized Hoodie: Cardinal Men Oversized Hoodies at The Souled Store.</p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </section>
-        
-        
-        
-        
-        
-      </main>
+            <div>
+                <img src="./../Images/New-Arrivals/img-3.avif"  class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Peanuts: Happy Days
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Bomber Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3999
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/New-Arrivals/img-4.avif"  class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Baggy-Fit Denim: Haze
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Men Jeans
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹2099
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/New-Arrivals/img-5.avif"  class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Textured Flat Knit: Cedar
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Polos
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹1599
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/New-Arrivals/img-6.avif"  class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Oversized T-Shirt: Arcade Gamer
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Oversized T-Shirts
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹1099
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/New-Arrivals/img-7.avif"  class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Demon Slayer: Rengoku
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Mortal Kombat: Warrior
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹2499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/New-Arrivals/img-8.avif"  class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Harry Potter: Witty House
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Oversized Pullovers
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹1999
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave-text">
+            <span>T</span>
+            <span>O</span>
+            <span>P</span>
+            &#160;
+            <span>1</span>
+            <span>0</span>
+            &#160;
+            <span>P</span>
+            <span>I</span>
+            <span>C</span>
+            <span>K</span>
+            <span>S</span>
+            &#160;
+            <span>O</span>
+            <span>F</span>
+            &#160;
+            <span>T</span>
+            <span>H</span>
+            <span>E</span>
+            &#160;
+            <span>W</span>
+            <span>E</span>
+            <span>E</span>
+            <span>K</span>
+        </div>
+
+        <div class="new-arrivals">
+            <div>
+                <img src="./../Images/Top-10-Picks/img-1.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Top-10-Picks/img-2.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Deadpool: No More Calm
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Joggers
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹1349
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Top-10-Picks/img-3.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Naruto Shippuden: Itachi's Story
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Hoodies & Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹2499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Top-10-Picks/img-4.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Straight-Fit Denim: Urban Blue
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jeans
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹2099
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Top-10-Picks/img-5.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Oversized Sweater: Deep Mocha
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Sweaters
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹2499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Top-10-Picks/img-6.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Cotton Linen: Twilight
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Cotton Linen Shirts
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹1499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Top-10-Picks/img-7.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        TSS Originals: Neutral
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Joggers
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹1799
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Top-10-Picks/img-8.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Everyday Polo: Woodgrain
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Polos
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹1499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Top-10-Picks/img-9.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Kanso V2: Beige
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Sneakers
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹2499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Top-10-Picks/img-10.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        TSS Originals: Hybrid 13
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Backpack
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3999
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            PRODUCTS
+        </div>
+        <div id="Pro-container">
+            <div>
+                <img src="./../Images/Products/img-1.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-2.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-3.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-4.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-5.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-6.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-7.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-8.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-9.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-10.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-11.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-12.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-13.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-14.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-15.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-16.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-17.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-18.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-19.webp" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-20.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-21.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-22.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-23.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-24.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-25.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-26.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-27.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-28.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-29.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-30.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-31.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-32.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-33.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-34.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-35.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-36.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-37.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-38.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-39.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./../Images/Products/img-40.avif" class="cat-img">
+                <div style="background: linear-gradient(to left, rgba(207, 8, 8, 0.596) 0%, rgba(75, 11, 11, 0.494) 100%); 
+                backdrop-filter: blur(20px); margin-top: -5px;">
+                    <div style="font-weight: bolder; font-size: 13px; color: lightgray; padding: 5px 2.5% 0px;">
+                        Bomber Jacket: Midnight Edge
+                    </div>
+                    <hr style="width: 95%; border: 1px solid lightgray;">
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 0px 2.5%;">
+                        Jackets
+                    </div>
+                    <div style="font-weight: light; font-size: 13px; color: lightgray; margin: 10px 2.5%; padding-bottom: 5px;">
+                        ₹3499
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer-container">
+        <div class="footer-inner">
+            <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>Reyavo - Luxury fashion redefined. Explore exclusive collections and premium styles.</p>
+            </div>
+            <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            </div>
+            <div class="footer-section contact">
+            <h3>Contact</h3>
+            <p>Email: support@reyavo.com</p>
+            <p>Phone: +91 01234 56789</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/aniket-kumar-383b1a37a/" target="_blank" aria-label="LinkedIn" class="social-icon fb">L</a>
+                <a href="https://www.instagram.com/nope_plague/?next=%2F&hl=en" target="_blank" aria-label="Instagram" class="social-icon ig">I</a>
+                <a href="https://github.com/NopePlague" target="_blank" aria-label="GitHub" class="social-icon tw">G</a>
+            </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Reyavo. All rights reserved.
+        </div>
+    </footer>
 </body>
-
-
-
 </html>
