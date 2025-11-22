@@ -7,3 +7,6 @@ body{
     min-width: 370px;
     height: 1000px;
 }
+html{
+    scroll-behavior: smooth;
+}
