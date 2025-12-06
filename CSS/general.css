@@ -5,7 +5,6 @@ body{
     color: white;
     font-family: Arial;
     min-width: 370px;
-    height: 1000px;
 }
 html{
     scroll-behavior: smooth;
