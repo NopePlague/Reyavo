@@ -1,125 +1,555 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Refined Animated Circular Face with Stylish Hair</title>
-<style>
-  body {
-    background: #222;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    perspective: 700px;
-  }
-  .face {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    background: #f5c9a7;
-    border-radius: 50%;
-    box-shadow: inset -10px 0 15px rgba(0,0,0,0.1);
-    animation: faceRotateLook 12s ease-in-out infinite;
-    transform-style: preserve-3d;
-    transform-origin: center center;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/SignUp</title>
+  <link rel="icon" href="./../Images/Logo.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  /* Hair: simple top band with smooth gradient */
-  .face::before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 40px;
-    background: linear-gradient(135deg, #3e1e1e 0%, #6b3d3d 100%);
-    border-radius: 80% 80% 40% 40% / 100% 100% 20% 20%;
-    box-shadow: 0 5px 8px rgba(62, 30, 30, 0.8);
-    z-index: 10;
-  }
+    body {
+      background: linear-gradient(-45deg, #0a0000, #1a0000, #440000, #000000);
+      background-size: 600% 600%;
+      animation: epicGradient 10s ease infinite;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Orbitron', monospace;
+      overflow: hidden;
+      position: relative;
+    }
 
-  @keyframes faceRotateLook {
-    0%, 100% { transform: rotateY(0deg) rotateX(15deg); }
-    16% { transform: rotateY(20deg) rotateX(15deg); }
-    33% { transform: rotateY(-20deg) rotateX(15deg); }
-    50% { transform: rotateY(0deg) rotateX(15deg); }
-    66% { transform: rotateY(0deg) rotateX(25deg); }
-    83% { transform: rotateY(0deg) rotateX(15deg); }
-  }
+    body::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      animation: cosmicPulse 5s ease-in-out infinite alternate;
+      z-index: 1;
+    }
 
-  .eyes {
-    position: absolute;
-    top: 52px;
-    left: 20px;
-    width: 80px;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-  }
+    @keyframes epicGradient {
+      0%, 100% { background-position: 0% 50%; }
+      25% { background-position: 100% 0%; }
+      50% { background-position: 100% 100%; }
+      75% { background-position: 0% 100%; }
+    }
 
-  .eye {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background: white;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.15);
-  }
+    @keyframes cosmicPulse {
+      0%{
+        opacity: 0.6;
+        transform: scale(1) rotate(0deg);
+      }
+      100%{opacity: 1;
+        transform: scale(1.1) rotate(2deg);
+      }
+    }
 
-  .eyeball {
-    position: absolute;
-    top: 10px;
-    left: 8px;
-    width: 14px;
-    height: 14px;
-    background: black;
-    border-radius: 50%;
-    animation: lookSequence 12s linear infinite, blinkSequence 12s steps(1) infinite;
-    transform-origin: center;
-  }
+    #container {
+      width: 440px;
+      height: 720px;
+      background: linear-gradient(145deg, rgba(15,15,20,0.95), rgba(35,10,10,0.9));
+      backdrop-filter: blur(30px);
+      border-radius: 30px;
+      box-shadow: 
+        0 30px 80px rgba(0,0,0,0.9),
+        0 0 0 2px rgba(255,40,40,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        0 0 150px rgba(255,40,40,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      padding: 40px 35px;
+      border: 1px solid rgba(255,40,40,0.6);
+      position: relative;
+    }
 
-  .eye::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #f5c9a7;
-    transform-origin: center bottom;
-    pointer-events: none;
-    animation: blinkSequence 12s steps(1) infinite;
-  }
+    #container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(255,60,60,0.1), transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(255,80,80,0.08), transparent 50%);
+      z-index: 0;
+    }
 
-  @keyframes lookSequence {
-    0%, 15%, 50%, 82%, 100% { transform: translate(0, 0); }
-    16%, 32% { transform: translate(6px, 1px); }
-    33%, 49% { transform: translate(-6px, 1px); }
-    66%, 81% { transform: translate(0, 6px); }
-  }
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
 
-  @keyframes blinkSequence {
-    0%, 14%, 15%, 17%, 32%, 34%, 49%, 51%, 65%, 67%, 81%, 83%, 100% { height: 14px; }
-    16%, 16.5%, 33%, 33.5%, 50%, 50.5%, 66%, 66.5%, 82%, 82.5% { height: 2px; }
-  }
-</style>
+    @keyframes epicFloat {
+      0%, 100%{transform: translateY(0) rotateZ(0deg);}
+      33%{transform: translateY(-20px) rotateZ(1deg);}
+      66%{transform: translateY(-10px) rotateZ(-1deg);}
+    }
+
+    .logo-section {
+      margin: 25px 0 30px;
+      text-align: center;
+    }
+
+    .logo-gam {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .logo-circle {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #2a0000, #660000, #870000);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 900;
+      color: #ff5555;
+      box-shadow: 
+        0 0 30px rgba(255,50,50,0.7),
+        inset 0 3px 15px rgba(0,0,0,0.6),
+        0 0 0 3px rgba(255,50,50,0.4);
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      position: relative;
+      overflow: hidden;
+      animation: logoPulse 4s ease-in-out infinite;
+    }
+
+    .logo-circle:nth-child(1){
+      animation-delay: 0s;
+    }
+    .logo-circle:nth-child(2){
+      animation-delay: 0.5s;
+    }
+    .logo-circle:nth-child(3){
+      animation-delay: 1s;
+    }
+
+    @keyframes logoPulse {
+      0%, 100%{
+        box-shadow: 0 0 30px rgba(255,50,50,0.7), inset 0 3px 15px rgba(0,0,0,0.6);
+      }
+      50%{
+        box-shadow: 0 0 50px rgba(255,80,80,1), inset 0 3px 15px rgba(255,50,50,0.3);
+      }
+    }
+
+    .logo-circle::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.8s ease;
+    }
+
+    .logo-circle:hover {
+      transform: scale(1.3) rotate(720deg);
+      box-shadow: 0 0 80px rgba(255,50,50,1);
+    }
+
+    .logo-circle:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .title {
+      font-size: 36px;
+      font-weight: 900;
+      background: linear-gradient(90deg, #ff4444, #ff8888, #ffffff, #ff6666, #ff4444);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: titleNeon 2.5s ease-in-out infinite alternate;
+      letter-spacing: 4px;
+      margin-top: 20px;
+      text-shadow: 
+        0 0 20px rgba(255,68,68,0.8),
+        0 0 40px rgba(255,68,68,0.6);
+      position: relative;
+    }
+
+    .title::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #ff4444, transparent);
+      animation: underlineSweep 3s ease-in-out infinite;
+    }
+
+    @keyframes titleNeon {
+      0%{
+        background-position: 0% 50%; filter: drop-shadow(0 0 15px rgba(255,68,68,0.8));
+      }
+      100%{
+        background-position: 100% 50%; filter: drop-shadow(0 0 35px rgba(255,68,68,1));
+      }
+    }
+
+    @keyframes underlineSweep{
+      0%, 100%{
+        width: 0;
+      }
+      50%{
+        width: 80%;
+      }
+    }
+
+    #forms-wrapper {
+      width: 100%;
+      height: 380px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+
+    .form {
+      position: absolute;
+      width: 100%;
+      padding: 0;
+      opacity: 0;
+      transform: scale(0.7) translateY(60px) rotateX(-15deg);
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      pointer-events: none;
+    }
+
+    .form.active {
+      opacity: 1;
+      transform: scale(1) translateY(0) rotateX(0deg);
+      pointer-events: auto;
+    }
+
+    .form.login-form {
+      height: 220px;
+    }
+
+    .form.signup-form {
+      height: 380px;
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+
+    .form.signup-form::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .form.signup-form::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.05);
+      border-radius: 3px;
+    }
+
+    .form.signup-form::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, rgba(255,68,68,0.8), rgba(255,100,100,0.6));
+      border-radius: 3px;
+      box-shadow: 0 0 10px rgba(255,68,68,0.4);
+    }
+
+    label {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ff6666;
+      display: block;
+      margin: 25px 0 12px;
+      letter-spacing: 2px;
+      text-shadow: 0 0 12px rgba(255,102,102,0.6);
+      position: relative;
+    }
+
+    label::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #ff6666, transparent);
+      transition: width 0.4s ease;
+    }
+
+    input:focus + label::after {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      max-width: 340px;
+      height: 50px;
+      border: 2px solid rgba(255,100,100,0.3);
+      border-radius: 30px;
+      padding: 0 25px;
+      font-size: 16px;
+      font-weight: 700;
+      background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05));
+      backdrop-filter: blur(15px);
+      color: #ffffff;
+      box-shadow: 
+        inset 0 3px 15px rgba(0,0,0,0.4),
+        0 5px 20px rgba(0,0,0,0.3);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+    }
+
+    input::placeholder {
+      color: rgba(255,255,255,0.5);
+      font-weight: 500;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #ff5555;
+      background: linear-gradient(145deg, rgba(255,255,255,0.22), rgba(255,255,255,0.08));
+      box-shadow: 
+        inset 0 3px 15px rgba(0,0,0,0.4),
+        0 0 40px rgba(255,85,85,0.6),
+        0 8px 30px rgba(0,0,0,0.4);
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    button {
+      width: 160px;
+      height: 55px;
+      border: none;
+      background: linear-gradient(45deg, #870000, #cc0000, #ff3333);
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      border-radius: 35px;
+      cursor: pointer;
+      margin: 30px auto 0;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      box-shadow: 
+        0 10px 35px rgba(135,0,0,0.7),
+        0 0 0 0 rgba(255,51,51,0);
+      display: block;
+    }
+
+    button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      transition: left 0.7s ease;
+    }
+
+    button:hover {
+      transform: translateY(-5px) scale(1.08);
+      box-shadow: 
+        0 20px 50px rgba(255,51,51,0.9),
+        0 0 10px 10px rgba(255,51,51,0.2);
+      background: linear-gradient(45deg, #ff3333, #ff6666, #ff4444);
+    }
+
+    button:hover::before {
+      left: 100%;
+    }
+
+    button:active {
+      transform: translateY(-2px) scale(1.03);
+    }
+
+    #signup-text {
+      color: rgba(255,255,255,0.85);
+      text-align: center;
+      font-size: 16px;
+      margin-top: 25px;
+      padding: 0 25px;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+
+    #signup-prompt {
+      display: block;
+    }
+
+    #have-account {
+      display: none;
+    }
+
+    #sign-up, #log-in {
+      color: #ff7777;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.4s ease;
+      position: relative;
+      padding: 5px 10px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+
+    #sign-up:hover, #log-in:hover {
+      color: #ffaaaa;
+      background: rgba(255,119,119,0.2);
+      text-shadow: 0 0 20px rgba(255,119,119,0.8);
+      transform: scale(1.05);
+    }
+
+    .floating-particles {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,80,80,0.8), transparent);
+      animation: epicFloat 6s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .floating-particles:nth-child(1) { 
+      width: 6px;
+      height: 6px;
+      top: 15%;
+      left: 15%;
+      animation-delay: 0s; 
+    }
+    .floating-particles:nth-child(2) { 
+      width: 4px;
+      height: 4px;
+      top: 25%;
+      right: 20%;
+      animation-delay: 1.5s; 
+    }
+    .floating-particles:nth-child(3) { 
+      width: 8px;
+      height: 8px;
+      bottom: 2%;
+      left: 25%;
+      animation-delay: 3s; 
+    }
+    .floating-particles:nth-child(4) { 
+      width: 5px;
+      height: 5px;
+      top: 70%;
+      right: 30%;
+      animation-delay: 2s; 
+    }
+
+    @media (max-width: 480px) {
+      #container{
+        width: 95%;
+        height: 750px;
+        padding: 30px 25px;
+      }
+      .title{font-size: 32px;
+      }
+      input{
+        max-width: 100%;
+      }
+      .logo-circle{
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div id="container">
+    <div class="floating-particles"></div>
+    <div class="floating-particles"></div>
+    <div class="floating-particles"></div>
+    <div class="floating-particles"></div>
 
-<div class="face" role="img" aria-label="Animated circular face looking around with stylish hair and blinking eyes">
-  <div class="eyes">
-    <div class="eye">
-      <div class="eyeball"></div>
-    </div>
-    <div class="eye">
-      <div class="eyeball"></div>
+    <div class="content-wrapper">
+      <div class="logo-section">
+        <div class="logo-gam">
+          <div class="logo-circle">G</div>
+          <div class="logo-circle">A</div>
+          <div class="logo-circle">M</div>
+        </div>
+        <div class="title" id="form-title">LOGIN</div>
+      </div>
+
+      <div id="forms-wrapper">
+        <form id="login-form" class="form active login-form">
+          <label for="login-username">USERNAME</label>
+            <input type="text" id="login-username" name="username" required placeholder="Ex: NopePlague">
+          <label for="login-password">PASSWORD</label>
+            <input type="password" id="login-password" name="password" required placeholder="PotatoBlaster#1234">
+          <button type="submit">LOGIN</button>
+        </form>
+
+        <form id="signup-form" class="form signup-form">
+          <label for="signup-username">USERNAME</label>
+            <input type="text" id="signup-username" name="username" required placeholder="Ex: NopePlague">
+          <label for="signup-email">EMAIL</label>
+            <input type="email" id="signup-email" name="email" required placeholder="you@example.com">
+          <label for="signup-password">PASSWORD</label>
+            <input type="password" id="signup-password" name="password" required placeholder="Create password">
+          <label for="signup-confirm">CONFIRM</label>
+            <input type="password" id="signup-confirm" name="confirm" required placeholder="Repeat password">
+          <button type="submit">SIGN UP</button>
+        </form>
+      </div>
+
+      <div id="signup-text">
+        <span id="signup-prompt">Don't have an account? 
+          <a href="#" id="sign-up">Sign Up</a>
+        </span>
+        <span id="have-account">
+          Have an account? 
+          <a href="#" id="log-in">Log In</a>
+        </span>
+      </div>
     </div>
   </div>
-</div>
 
+  <script>
+    const signUpLink = document.getElementById('sign-up');
+    const loginLink = document.getElementById('log-in');
+    const signupPrompt = document.getElementById('signup-prompt');
+    const haveAccount = document.getElementById('have-account');
+    const loginForm = document.getElementById('login-form');
+    const signupForm = document.getElementById('signup-form');
+    const title = document.getElementById('form-title');
+
+    signUpLink.addEventListener('click', function(){
+      loginForm.classList.remove('active');
+      signupForm.classList.add('active');
+      signupPrompt.style.display = 'none';
+      haveAccount.style.display = 'inline';
+      title.textContent = 'SIGN UP';
+    });
+
+    loginLink.addEventListener('click', function(){
+      signupForm.classList.remove('active');
+      loginForm.classList.add('active');
+      haveAccount.style.display = 'none';
+      signupPrompt.style.display = 'inline';
+      title.textContent = 'LOGIN';
+    });
+  </script>
 </body>
 </html>
