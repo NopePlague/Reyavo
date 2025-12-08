@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wishlist • Reyavo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background:#050008;
+      color:#f5f5f5;
+      min-height: 100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    #header-container{
+        width:100%;
+        height: 70px;
+        display: flex;
+        gap: 10px;
+        position: fixed;
+        z-index: 2;
+        background: linear-gradient(
+        to left,
+        rgba(255, 0, 0, 0.381) 0%,
+        rgba(255, 0, 0, 0.118) 40%,
+        black 60%,
+        black 100%);
+        backdrop-filter: blur(20px);
+    }
+    .menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    top: 18px;
+    left: 10px;
+    }
+
+    .menu-btn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+    }
+
+    .menu-btn:hover span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-btn:hover span:nth-child(2) {
+    opacity: 0;
+    }
+
+    .menu-btn:hover span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .sec{
+        transition: transform 0.2s ease;
+    }
+    .sec::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        background-color: red;
+        transition: width 0.2s ease;
+    }
+    .sec:hover{
+        transform: translateY(-3px);
+    }
+    .sec:hover::after {
+        width: 100%;
+        box-shadow: 0 0 50px 1px red;
+    }
+    .search {
+        width: 250px;
+        height: 40px;
+        border-radius: 100px;
+        border: none;
+        padding: 0 20px;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        color: #333;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        outline: none;
+        position: relative;
+        overflow: hidden;
+    }
+    .search::placeholder {
+        color: gray;
+    }
+    .underline-A:hover{
+        background-color: rgba(128, 128, 128, 0.164);
+        transform: translateY(2.5px);
+        border-bottom: 5px solid red;
+    }
+    #seach-appear{
+        display: none;
+    }
+    #sized-fix{
+        width: 100%;
+        height: 40px;
+        background-color: black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        display: none;
+        font-weight: bold;
+    }
+    #fixed-A{
+        width: 36%;
+        text-align: center;
+        align-content: center;
+        height: 95%;
+    }
+    #fixed-A:hover{
+        box-sizing: border-box;
+        transform: translateY(2.5px);
+        border-bottom: 5px solid red;
+    }
+
+    main {
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 24px 16px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: radial-gradient(circle at top, #ff4b4b22 0, #080010 45%, #120021 100%);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 28px 26px;
+      text-align: center;
+    }
+
+    .icon-ring {
+      width: 92px;
+      height: 92px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 0, #ff6f91 0, #2b002f 60%, #050008 100%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size: 38px;
+    }
+
+    .title {
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color:#cfd8dc;
+      margin-bottom: 18px;
+    }
+
+    .pill-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      justify-content:center;
+      margin-bottom: 22px;
+    }
+    .pill {
+      font-size:11px;
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.18);
+      background:rgba(0,0,0,0.35);
+      color:#eceff1;
+    }
+
+    .btn-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      margin-bottom: 12px;
+    }
+    .btn {
+      border:none;
+      cursor:pointer;
+      border-radius:999px;
+      font-size:13px;
+      padding:10px 22px;
+      font-weight:600;
+    }
+    .btn-primary {
+      background:#ffd814;
+      color:#050008;
+    }
+    .btn-secondary {
+      background:transparent;
+      color:#80d8ff;
+      border:1px solid rgba(128,216,255,0.6);
+    }
+
+    .helper-text {
+      font-size:11px;
+      color:#90a4ae;
+    }
+
+    footer {
+      font-size: 11px;
+      color:#757575;
+      text-align:center;
+      padding: 12px 0 18px;
+    }
+
+    @media (max-width: 1024px) {
+        #sec-A div{
+            display: none;
+        }
+        .search{
+            display: none;
+        }
+        #seach-appear{
+            display: inline-block;
+        }
+        #header-container{
+            border-bottom: 0.1px solid gray;
+        }
+        #sized-fix{
+            display: flex;
+        }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 0 16px;
+        font-size: 12px;
+        height: 60px;
+      }
+      header .nav { gap: 10px; }
+      .card {
+        padding: 22px 18px;
+        border-radius: 16px;
+      }
+      .title { font-size: 22px; }
+      .subtitle { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div id="header-container">
+            <div style="width: 60px;">
+                <button class="menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; color: white; justify-content: space-between;
+             margin-left: 20px; margin-right: 20px;">
+                <div id="sec-A" style="display: flex; gap: 1.7vw; justify-content: space-evenly; align-items: center;
+                font-size: 25px; font-weight: bold;">
+                    <div class="sec"><a href="#" style="color: white; text-decoration: none;" id="men-sec">MEN</a></div>
+                    <div class="sec"><a href="#" style="color: white; text-decoration: none;" id="men-sec">WOMEN</a></div>
+                    <div class="sec"><a href="#" style="color: white; text-decoration: none;" id="men-sec">SNEAKERS</a></div>
+                </div>
+                <div style="height: 100%; display: flex; justify-content: center; align-items: center; margin:0 25px;">
+                    <img src="./../Images/Logo.png" style="height: 80%;">
+                </div>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1vw;">
+                         <input type="text" id="search" placeholder="SEARCH" class="search">
+                         <div style="height: 90%; box-sizing: border-box; border: none; transform: translateY(0px);" class="underline-A">
+                            <img id="seach-appear" src="./../Images/SVG/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" style="height: 40px;">
+                         </div>
+                         <div style="height: 90%; box-sizing: border-box;" class="underline-A">
+                            <a href="./Login.html"><img src="./../Images/SVG/account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" style="height: 40px;"></a>
+                         </div>
+                         <div style="height: 90%; box-sizing: border-box;" class="underline-A">
+                            <a href="./Whishlist.html"><img src="./../Images/SVG/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" style="height: 40px;"></a>
+                         </div>
+                         <div style="height: 90%; box-sizing: border-box;" class="underline-A">
+                            <a href="./Cart.html"><img src="./../Images/SVG/shopping_cart_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" style="height: 40px;"></a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%; height: 70.01px;"></div>
+        <div id="sized-fix">
+            <div id="fixed-A"><a href="#" style="color: white; text-decoration: none;">MEN</a></div>
+            <div style="width: 2px; height: 70%; background-color: white;"></div>
+            <div id="fixed-A"><a href="#" style="color: white; text-decoration: none;">WOMEN</a></div>
+            <div style="width: 2px; height: 70%; background-color: white;"></div>
+            <div id="fixed-A"><a href="#" style="color: white; text-decoration: none;">SNEAKERS</a></div>
+        </div>
+    </header>
+
+  <main>
+    <div class="card">
+      <div class="icon-ring">♡</div>
+      <div class="title">Your wishlist is empty</div>
+      <div class="subtitle">
+        Save the fits you love and come back to them anytime.  
+        Add products to your wishlist with the heart icon.
+      </div>
+
+      <div class="pill-row">
+        <div class="pill">Track price drops</div>
+        <div class="pill">Compare styles later</div>
+        <div class="pill">Quick access to favorites</div>
+      </div>
+
+      <div class="btn-row">
+        <a href="./index.html">
+            <button class="btn btn-primary">Start exploring</button>
+        </a>
+        <button class="btn btn-secondary">View latest drops</button>
+      </div>
+
+      <div class="helper-text">
+        Tip: You can add items to wishlist without adding them to cart.
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2025 Reyavo • Wishlist</footer>
+</body>
+</html>
