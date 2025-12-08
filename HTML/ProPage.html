@@ -61,7 +61,7 @@ body { font-family: Arial, sans-serif; background:#050008; color:#f5f5f5; }
 }
 
 .sec{
-    transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 .sec::after {
     content: "";
@@ -549,9 +549,9 @@ select {
              margin-left: 20px; margin-right: 20px;">
                 <div id="sec-A" style="display: flex; gap: 1.7vw; justify-content: space-evenly; align-items: center;
                 font-size: 25px; font-weight: bold;">
-                    <a href="#"><div class="sec"><a href="#" style="color: white; text-decoration: none;" id="men-sec">MEN</a></div></a>
-                    <div class="sec"><a href="#" style="color: white; text-decoration: none;" id="women-sec">WOMEN</a></div>
-                    <div class="sec"><a href="#" style="color: white; text-decoration: none;" id="sneakers">SNEAKERS</a></div>
+                    <div class="sec"><a href="./index.html" style="color: white; text-decoration: none;" id="men-sec">MEN</a></div>
+                    <div class="sec"><a href="./index.html" style="color: white; text-decoration: none;" id="women-sec">WOMEN</a></div>
+                    <div class="sec"><a href="./index.html" style="color: white; text-decoration: none;" id="sneakers-sec">SNEAKERS</a></div>
                 </div>
                 <div style="height: 100%; display: flex; justify-content: center; align-items: center; margin:0 25px;">
                     <img src="./../Images/Logo.png" style="height: 80%;">
@@ -742,12 +742,19 @@ select {
 </section>
 
 <script>
-  document.querySelectorAll('.size-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+  var sizeButtons = document.querySelectorAll('.size-btn');
+  function clearActiveClass() {
+    for (var i = 0; i < sizeButtons.length; i++) {
+      sizeButtons[i].classList.remove('active');
+    }
+  }
+  for (var i = 0; i < sizeButtons.length; i++) {
+    sizeButtons[i].addEventListener('click', function () {
+      clearActiveClass();
       this.classList.add('active');
     });
-  });
+  }
 </script>
+
 </body>
 </html>
